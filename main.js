@@ -20,7 +20,11 @@
 
 // starter code
 function palindrome(str) {
-
+    let splitString = str.split("");
+    let reverseArray = splitString.reverse();
+    let joinArray = reverseArray.join("");
+    let result = (str === joinArray) ? true : false
+    return result;
   }
   
   palindrome("eye");
