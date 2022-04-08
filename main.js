@@ -19,12 +19,22 @@
 
 
 // starter code
+// regex
+let regexFunction = (str) => {
+    let textLowerCase = str.toLowerCase();
+    let cleanStr = textLowerCase.replace(/[^a-z0-9]/gi, '');
+    return cleanStr;
+}
+console.log(regexFunction('g4t-'));
+
+// palindrome checker
 function palindrome(str) {
-    let splitString = str.split("");
+    let regex = regexFunction(str);
+    let splitString = regex.split("");
     let reverseArray = splitString.reverse();
     let joinArray = reverseArray.join("");
-    let result = (str === joinArray) ? true : false
+    let result = (regex === joinArray) ? true : false
     return result;
   }
-  
+
   palindrome("eye");
